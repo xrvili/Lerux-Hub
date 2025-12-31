@@ -36,7 +36,7 @@ function debugLogModule:exportLogs()
 	local initialized = `LOG INITIALIZED: {self.initialized}`
 	local exported = `LOG EXPORTED: {os.date("%Y-%m-%d %H:%M:%S") .. string.format(".%03d", math.floor((os.clock() % 1) * 1000))}`
 	local bottom = string.rep("=", #top)
-	local header = top .. "\n" .. initialized .. "\n" .. exported .. "\n" .. bottom
+	local header = top .. "\n\n" .. initialized .. "\n" .. exported .. "\n" .. bottom
 	
 	return header .. "\n" .. table.concat(self.logData, "\n")
 end
