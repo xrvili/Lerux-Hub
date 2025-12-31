@@ -32,7 +32,7 @@ function debugLogModule:exportLogs()
 		return
 	end
 	
-	local top = `=== LOG CATEGORY: {self.logCategory} ===`
+	local top = `=== LOG CATEGORY: {self.logCategory:upper()} ===`
 	local initialized = `LOG INITIALIZED: {self.initialized}`
 	local exported = `LOG EXPORTED: {os.date("%Y-%m-%d %H:%M:%S") .. string.format(".%03d", math.floor((os.clock() % 1) * 1000))}`
 	local bottom = string.rep("=", #top)
