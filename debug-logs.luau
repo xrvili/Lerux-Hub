@@ -52,7 +52,7 @@ function debugLogModule:downloadLogs()
 		makefolder("Lerux-Debug")
 	end
 	
-	writefile("Lerux-Debug/" .. os.date("%Y-%m-%d %H:%M-%S") .. ".txt", self:exportLogs())
+	writefile("Lerux-Debug/" .. os.date("%Y-%m-%d_%H-%M-%S") .. ".txt", self:exportLogs())
 end
 
 return debugLogModule
