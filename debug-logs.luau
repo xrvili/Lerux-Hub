@@ -42,7 +42,6 @@ function debugLogModule:exportLogs()
 end
 
 function debugLogModule:downloadLogs()
-	
 	if not writefile or not isfolder or not makefolder then
 		warn("Executor missing functions")
 		return
